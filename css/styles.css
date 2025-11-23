@@ -1,0 +1,299 @@
+/* === Base Reset === */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+}
+
+:root {
+    /* Colors */
+    --primary-color: #4f46e5;
+    --secondary-color: #f43f5e;
+    --accent-color: #0ea5e9;
+    --success-color: #22c55e;
+    --danger-color: #ef4444;
+    --warning-color: #facc15;
+
+    /* Grayscale */
+    --gray-50: #fdfdfd;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #111827;
+
+    /* Background gradient */
+    --bg-gradient: linear-gradient(135deg, #fef3c7, #f0abfc);
+}
+
+body.dark-mode {
+    --primary-color: #8b5cf6;
+    --secondary-color: #fb7185;
+    --accent-color: #22d3ee;
+    --success-color: #4ade80;
+    --danger-color: #f87171;
+    --warning-color: #fde047;
+
+    --gray-50: #1f2937;
+    --gray-100: #111827;
+    --gray-200: #1e293b;
+    --gray-300: #374151;
+    --gray-600: #9ca3af;
+    --gray-700: #d1d5db;
+    --gray-800: #f9fafb;
+
+    --bg-gradient: linear-gradient(135deg, #0f172a, #312e81);
+}
+
+body {
+    font-family: 'Poppins', 'Inter', sans-serif;
+    background: var(--bg-gradient);
+    min-height: 100vh;
+    color: var(--gray-800);
+    line-height: 1.6;
+}
+
+/* === Container === */
+.container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* === Header === */
+header {
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(8px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-radius: 0 0 24px 24px;
+}
+
+body.dark-mode header {
+    background: rgba(17, 24, 39, 0.85);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo i {
+    font-size: 2.2rem;
+    color: var(--primary-color);
+}
+
+.logo h1 {
+    font-size: 2rem;
+    color: var(--gray-800);
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.tab-btn {
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 12px;
+    background: rgba(255,255,255,0.6);
+    color: var(--gray-600);
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    backdrop-filter: blur(4px);
+}
+
+body.dark-mode .tab-btn {
+    background: rgba(31,41,55,0.6);
+    color: var(--gray-50);
+}
+
+.tab-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+}
+
+.tab-btn.active {
+    background: var(--primary-color);
+    color: #fff;
+    box-shadow: 0 8px 24px rgba(79,70,229,0.5);
+}
+
+/* === Cards & Glassmorphism === */
+.search-card,
+.route-card,
+.empty-state,
+.modal-content {
+    background: rgba(255,255,255,0.75);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    transition: all 0.3s;
+}
+
+body.dark-mode .search-card,
+body.dark-mode .route-card,
+body.dark-mode .empty-state,
+body.dark-mode .modal-content {
+    background: rgba(31,41,55,0.75);
+}
+
+/* === Buttons === */
+.btn {
+    padding: 0.875rem 1.5rem;
+    border-radius: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: all 0.3s;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+.btn-secondary:hover {
+    background: #fb6f92;
+    transform: translateY(-2px);
+}
+
+/* === Inputs === */
+.input-group input,
+.input-group select {
+    padding: 0.875rem 1rem;
+    border: 2px solid var(--gray-300);
+    border-radius: 12px;
+    background: rgba(255,255,255,0.8);
+    color: var(--gray-800);
+}
+
+body.dark-mode .input-group input,
+body.dark-mode .input-group select {
+    background: rgba(31,41,55,0.8);
+    color: var(--gray-50);
+}
+
+/* === Badges & Steps === */
+.badge-success { background: #22c55e; color: #fff; }
+.badge-warning { background: #facc15; color: #000; }
+
+.step-badge {
+    padding: 0.5rem 0.75rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.step-badge.walk { background: var(--gray-700); }
+.step-badge.transfer { background: var(--secondary-color); }
+
+/* === Empty State & Loading === */
+.empty-state i {
+    font-size: 4rem;
+    color: var(--accent-color);
+}
+
+/* === Modal === */
+.modal {
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* === Responsive Design === */
+@media (max-width: 768px) {
+    nav, .search-inputs, .search-options, .filter-grid {
+        flex-direction: column;
+        grid-template-columns: 1fr;
+    }
+
+    .tab-btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+@media (max-width: 480px) {
+    .header-content {
+        flex-direction: column;
+        gap: 1rem;
+    }
+}
+
+/* === Footer === */
+.footer {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    margin-top: 4rem;
+    padding: 3rem 0 1rem;
+    border-top: 1px solid var(--gray-200);
+}
+
+body.dark-mode .footer {
+    background: rgba(31, 41, 55, 0.75);
+    border-top: 1px solid var(--gray-300);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.footer-section h3,
+.footer-section h4 {
+    margin-bottom: 0.75rem;
+    color: var(--primary-color);
+}
+
+.footer-section p {
+    color: var(--gray-600);
+    font-size: 0.95rem;
+    margin: 0.25rem 0;
+}
+
+body.dark-mode .footer-section p {
+    color: var(--gray-700);
+}
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 1rem;
+    border-top: 1px solid var(--gray-200);
+    color: var(--gray-600);
+}
+
+body.dark-mode .footer-bottom {
+    border-top: 1px solid var(--gray-300);
+    color: var(--gray-700);
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Transit - Public Transit Planner</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h1>SmartTransit</h1>
+                </div>
+                <nav>
+                    <button id="plan-tab" class="tab-btn active">
+                        <i class="fas fa-search"></i> Plan Trip
+                    </button>
+                    <button id="saved-tab" class="tab-btn">
+                        <i class="fas fa-bookmark"></i> Saved Routes <span id="saved-count">(0)</span>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+ <!-- Plan Trip Section -->
+        <section id="plan-section" class="section active">
+            <div class="search-card">
+                <div class="search-inputs">
+                    <div class="input-group">
+                        <label for="origin">
+                            <i class="fas fa-map-pin"></i> From
+                        </label>
+                        <input type="text" id="origin" placeholder="Enter starting location..." />
+                    </div>
+                    <div class="input-group">
+                        <label for="destination">
+                            <i class="fas fa-location-arrow"></i> To
+                        </label>
+                        <input type="text" id="destination" placeholder="Enter destination..." />
+                    </div>
+                </div>
+
+                <div class="search-options">
+                    <div class="input-group time-input">
+                        <label for="departure-time">
+                            <i class="fas fa-clock"></i> Departure Time (Optional)
+                        </label>
+                        <input type="time" id="departure-time" />
+                    </div>
+                    <div class="button-group">
+                        <button id="search-btn" class="btn btn-primary">
+                            <i class="fas fa-search"></i> Find Routes
+                        </button>
+                        <button id="filter-btn" class="btn btn-secondary">
+                            <i class="fas fa-filter"></i> Filters
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Filters Panel -->
+                <div id="filters-panel" class="filters-panel hidden">
+                    <div class="filter-grid">
+                    </div>
+                </div>
+
+                <!-- Error Display -->
+                <div id="error-message" class="error-message hidden">
+                </div>
+
+                <!-- Loading Display -->
+                <div id="loading" class="loading hidden">
+                </div>
+            </div>
+
+            <!-- Results Section -->
+            <div id="results-section" class="results-section hidden">
+                <h2 id="results-title"></h2>
+                <div id="routes-container" class="routes-container"></div>
+            </div>
+        </section>
+
+        <!-- Saved Routes Section -->
+        <section id="saved-section" class="section">
+            <h2>My Saved Routes <span id="saved-routes-count"></span></h2>
+            <div id="saved-routes-container" class="routes-container">
+                <div class="empty-state">
+                    <i class="fas fa-bookmark"></i>
+                    <h3>No saved routes yet</h3>
+                    <p>Start planning trips and save your favorite routes!</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Route Details Modal -->
+    <div id="route-modal" class="modal hidden">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Route Details</h2>
+                <button id="close-modal" class="close-btn">
+                </button>
+            </div>
+            <div class="modal-body">
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>SmartTransit</h3>
+                    <p>Your intelligent public transit planner</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Developer</h4>
+                    <p>Created by: Teta Gasangwa</p>
+                    <p>Email: g.teta5@alustudent.com</p>
+                </div>
+                <div class="footer-section">
+                    <p>Location: Kigali,Rwanda</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 SmartTransit. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/config.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>

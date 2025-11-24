@@ -1,4 +1,4 @@
-##SmartTransit
+# SmartTransit
 
 Demo & Load Balancer
 
@@ -10,7 +10,7 @@ Your intelligent public transit planner — making your daily commute simple and
 
 SmartTransit is a modern, responsive web application designed to help users plan public transportation routes efficiently. With an intuitive interface and powerful filtering options, finding the perfect route has never been easier.
 
-##Features
+# Features
 
 Smart Route Planning
 
@@ -32,7 +32,7 @@ Accessibility Options: Filter for wheelchair-accessible routes
 
 Transfer Optimization: Option to minimize connections for simpler trips
 
-##Route Management
+Route Management
 
 Save favorite routes for quick access
 
@@ -65,7 +65,7 @@ SmartTransit/
 └── README.md         # Project documentation
 
 
-##File Overview:
+# File Overview:
 
 index.html: UI structure including navigation, search, filters, results, saved routes, and modals
 
@@ -75,7 +75,7 @@ js/config.js: API keys and endpoint configuration
 
 js/app.js: Search, filtering, storage, and user interactions
 
-##Getting Started
+# Getting Started
 
 Prerequisites
 
@@ -89,7 +89,7 @@ Installation
 git clone https://github.com/yourusername/smarttransit.git
 cd smarttransit
 
-##Configure API
+# Configure API
 
 Edit js/config.js:
 

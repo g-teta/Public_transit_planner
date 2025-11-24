@@ -2,9 +2,9 @@
 
 Demo & Load Balancer
 
-Demo Video: [Insert Video URL Here]
+Demo Video: https://youtu.be/2GdHOrNU7us
 
-Load Balancer URL: [Insert URL Here]
+Load Balancer URL: http://publictransitplanner.gteta.tech/
 
 Your intelligent public transit planner — making your daily commute simple and stress-free!
 

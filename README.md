@@ -1,4 +1,5 @@
-SmartTransit 🚌🚇🚊
+SmartTransit 
+
 Your intelligent public transit planner - making your daily commute simple and stress-free!
 SmartTransit is a modern, responsive web application designed to help users plan public transportation routes efficiently. With an intuitive interface and powerful filtering options, finding the perfect route has never been easier.
 
